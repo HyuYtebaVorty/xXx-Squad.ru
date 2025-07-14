@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Правила</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .rules-box {
+      position: relative;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 800px;
+      width: 90%;
+      text-align: left;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+    }
+
+    .rules-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .rules-box p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .glow-border {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 16px;
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+      background-size: 400% 400%;
+      animation: gradient 8s ease infinite;
+      z-index: -1;
+      filter: blur(10px);
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rules-box">
+    <div class="glow-border"></div>
+    <h2>Правила</h2>
+    <p>1.1 - Незнание правил не освобождает от ответственности</p>
+    <p>2.1 - Политические разговоры - мут</p>
+    <p>3.1 - Рекламировать сторонние ресурсы, которые не связаны с нашим дискорд сервером — бан навсегда</p>
+    <p>4.1 - 18+ в чате — мут</p>
+    <p>5.1 - Срачи и жестокий кибербуллинг — мут от 1 до 7 дней (в зависимости от жесткости)</p>
+    <p>6.1 - Перезаход/Твинк для обхода бана/мута — бан навсегда</p>
+    <p>7.1 - Стримы с 18+ контентом — мут от 1 часа до 1 дня</p>
+    <p>8.1 - Музыка/звуки в микрофон без согласования с @Персонал — мут от 10 минут до 1 часа</p>
+    <p>9.1 - Спам в любом проявлении — кик/бан</p>
+    <p>10.1 - Продажа чего-либо за реальную валюту (не на Маркете) — бан/мут</p>
+    <p>11.1 - Обман или введение в заблуждение — бан от 1 до 7 дней</p>
+    <p>12.1 - Оскорбление религии в любом виде — мут от 1 до 7 дней</p>
+    <p>13.1 - Оффтоп (флуд) в чаты, где это запрещено (например, заявки на модератора) — мут от 1 до 7 дней</p>
+    <p>14.1 - Троллинг, оскорбления @Персонал — кик, бан</p>
+    <p>[!] Администрация выбирает наказания на своё усмотрение</p>
+    <p>[!] Администрация может выдать наказание, даже если его нет в правилах</p>
+    <p>[!] Админ всегда прав</p>
+  </div>
+
+</body>
+</html>

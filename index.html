@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>xXx Squad</title>
+  <link rel="icon" href="assets/static_8.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      flex-direction: column;
+    }
+
+    
+    .topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: rgba(0, 0, 0, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 10;
+    }
+
+    .topbar .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .topbar .logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+
+    .topbar .neon-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fff;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #fff;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 2;
+      margin-top: 80px;
+    }
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #ff0000,
+        0 0 40px #ff0000,
+        0 0 50px #ff0000,
+        0 0 60px #ff0000,
+        0 0 70px #ff0000;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      opacity: 0.7;
+      margin-bottom: 1rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 6px #fff);
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .image-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      max-width: 50%;
+      object-fit: cover;
+      opacity: 0.15;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .image-right {
+        max-width: 100%;
+        height: 50vh;
+        bottom: auto;
+        top: auto;
+        right: 0;
+        left: 50%;
+        opacity: 0.1;
+      }
+
+      .topbar {
+        height: auto;
+        padding: 10px;
+        justify-content: center;
+      }
+
+      .topbar .neon-title {
+        font-size: 1rem;
+      }
+    }
+
+   
+    .menu-container {
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    .menu-button {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 0 5px #000;
+      transition: background 0.3s;
+    }
+
+    .menu-button:hover {
+      background-color: #222;
+    }
+
+    .dropdown {
+      background-color: #0a0a0a;
+      margin-top: 8px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dropdown a {
+      padding: 10px 16px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: background 0.3s;
+    }
+
+    .dropdown a:hover {
+      background-color: #1a1a1a;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="topbar">
+    <div class="left">
+      <img src="assets/static_8.png" alt="Лого" class="logo" />
+      <span class="neon-title">xXx Squad</span>
+    </div>
+  </div>
+
+ 
+  <div class="menu-container">
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+    <div id="dropdown-menu" class="dropdown hidden">
+      <a href="rules/index.html">Правила</a>
+    </div>
+  </div>
+
+  
+  <div class="container">
+    <h1>xXx Squad</h1>
+    <p>Самый лучший ратерский сквад в мире.</p>
+
+    <div class="social-icons">
+      <a href="https://discord.gg/mhpwqrzCve" title="Discord">
+        <img src="assets/discord.png" alt="Discord" />
+      </a>
+      <a href="https://www.youtube.com/@xXxsquad-v1s" title="YouTube">
+        <img src="assets/youtube.png" alt="YouTube" />
+      </a>
+      <a href="" title="Telegram">
+        <img src="assets/telegram.png" alt="Telegram" />
+      </a>
+    </div>
+  </div>
+
+  <img src="assets/fon.png" alt="фон" class="image-right" />
+
+ 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdown-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
